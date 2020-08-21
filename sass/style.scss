@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Devonshire&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+$green: #579C87;
+$yellow: #FDCB46;
+$note-color: #FCDFDB;
+$note-text: #3C1218;
+$note-music: #F15861;
+$chic-color: #FFF5FE;
+$chic-text: #D5934B;
+$delice-color: #F9F9F9;
+$delice-text: #0887FB;
+$palette-color: #FDFDFD;
+$palette-text: #72BF56;
+
+body {
+    font-family: "montserrat";
+    margin: 0;
+}
+
+header {
+    background: $green;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    color:  $yellow;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+article.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.article-menu {
+    width: 90%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+a.article-menu-note {
+    background: $note-color;
+    color: $note-text;
+}
+
+a.article-menu-chic {
+    background: $chic-color;
+    color: $chic-text;
+}
+
+a.article-menu-delice {
+    background: $delice-color;
+    color: $delice-text;
+}
+
+a.article-menu-palette {
+    background: $palette-color;
+    color: $palette-text;
+}
+
+.article-menu-note-title {
+    font-family: "devonshire";
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.article-menu-chic-title {
+    font-family: "croissant one";
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.article-menu-delice-title {
+    font-family: "dancing script";
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.article-menu-palette-title {
+    font-family: "kaushan script";
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+.article-menu-note-subtitle {
+    font-family: "balsamiq sans";
+    font-size: xxx-large;
+    margin-top: 1rem;
+}
+
+.article-menu-chic-subtitle {
+    font-family: "libre caslon text";
+    font-size: xxx-large;
+    margin-top: 1rem;
+}
+
+.article-menu-delice-subtitle {
+    font-family: "kalam";
+    font-size: xxx-large;
+    margin-top: 1rem;
+}
+
+.article-menu-palette-subtitle {
+    font-family: "kalam";
+    font-size: xxx-large;
+    margin-top: 1rem;
+}
+
+.previously-button {
+    width: 70%;
+    height: 3rem;
+    background: #579C87;
+    color: #FDCB46;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+    font-size: xxx-large;
+    color: $note-music;
+}
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background: #579C87;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+
+footer a {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 50%;
+    text-decoration: none;
+    color: $yellow;
+}
+
+.footer-mentions {
+    justify-content: flex-start;
+}
+
+.footer-contact {
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main {
+        grid-area: 2/1/3/5;
+    }
+
+    article {
+        grid-area: 2/1/3/4;
+    }
+    header {
+        grid-area: 1/1/2/3;
+    }
+
+    .header-title {
+        font-size: 2.5rem;
+    }
+
+    a.article-menu-note {
+        grid-area: 2/1/3/2;
+    }
+
+    a.article-menu-chic {
+        grid-area: 2/2/3/3;
+    }
+
+    .article-menu-delice {
+        grid-area:3/1/4/2;
+    }
+
+    .article-menu-palette {
+        grid-area: 3/2/4/3;
+    }
+
+    .previously {
+        grid-area: 4/1/5/3;
+    }
+
+    footer {
+        grid-area: 5/1/6/3;
+    }
+}
