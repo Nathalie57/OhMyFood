@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Devonshire&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
@@ -14,6 +14,8 @@ $note-text: #3C1218;
 $note-music: #F15861;
 $chic-color: #FFF5FE;
 $chic-text: #D5934B;
+$chic-main-course: #A56799;
+$chic-dessert: #6E4CCC;
 $delice-color: #F9F9F9;
 $delice-text: #0887FB;
 $palette-color: #FDFDFD;
@@ -38,13 +40,13 @@ header {
     font-size: 1.5rem;
 }
 
-article.article {
+.article {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-a.article-menu {
+.article-menu {
     width: 90%;
     height: 20rem;
     display: flex;
@@ -55,30 +57,26 @@ a.article-menu {
     text-decoration: none;
 }
 
-a.article-menu-note {
+.article-menu-note {
     background: $note-color;
     color: $note-text;
-}
-
-a.article-menu-chic {
-    background: $chic-color;
-    color: $chic-text;
-}
-
-a.article-menu-delice {
-    background: $delice-color;
-    color: $delice-text;
-}
-
-a.article-menu-palette {
-    background: $palette-color;
-    color: $palette-text;
 }
 
 .article-menu-note-title {
     font-family: "devonshire";
     font-size: xx-large;
     text-decoration: none;
+}
+   
+.article-menu-note-subtitle {
+    font-family: "balsamiq sans";
+     font-size: xxx-large;
+     margin-top: 1rem;
+}
+
+.article-menu-chic {
+    background: $chic-color;
+    color: $chic-text;
 }
 
 .article-menu-chic-title {
@@ -87,41 +85,46 @@ a.article-menu-palette {
     text-decoration: none;
 }
 
+.article-menu-chic-subtitle {
+    font-family: "libre caslon text";
+    font-size: xxx-large;
+    margin-top: 1rem;
+}
+    
+.article-menu-delice {
+    background: $delice-color;
+    color: $delice-text;
+}
+
 .article-menu-delice-title {
     font-family: "dancing script";
     font-size: xx-large;
     text-decoration: none;
 }
 
-.article-menu-palette-title {
-    font-family: "kaushan script";
-    font-size: xx-large;
-    text-decoration: none;
-}
-
-.article-menu-note-subtitle {
-    font-family: "balsamiq sans";
-    font-size: xxx-large;
-    margin-top: 1rem;
-}
-
-.article-menu-chic-subtitle {
-    font-family: "libre caslon text";
-    font-size: xxx-large;
-    margin-top: 1rem;
-}
-
 .article-menu-delice-subtitle {
     font-family: "kalam";
     font-size: xxx-large;
     margin-top: 1rem;
+    }
+    
+.article-menu-palette {
+    background: $palette-color;
+    color: $palette-text;
 }
+
+.article-menu-palette-title {
+    font-family: "kaushan script";
+    font-size: xx-large;
+    text-decoration: none;
+}        
 
 .article-menu-palette-subtitle {
     font-family: "kalam";
     font-size: xxx-large;
     margin-top: 1rem;
 }
+
 
 .previously-button {
     width: 70%;
@@ -166,15 +169,100 @@ footer a {
 .footer-mentions {
     justify-content: flex-start;
 }
-
+    
 .footer-contact {
     justify-content: flex-end;
 }
 
+
+.main-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
 .main-article-menu {
-    background: $note-color;
     margin: 1rem;
     padding: .5rem;
+    text-align: center;
+    font-family: "kalam";
+}
+
+.main-article-menu-note {
+    background: $note-color;
+    color: $note-text;
+}
+
+.main-article-menu-chic {
+    background: $chic-color;
+    font-family: "libre caslon text";
+    font-size: .8rem;
+    color: $chic-text;
+    font-weight: 400;
+}
+
+.main-article-menu-delice {
+    background: $delice-color;
+}
+
+.main-article-menu-palette {
+    background: $palette-color;
+}
+
+.menu-title {
+    margin: 0;
+}
+
+.menu-title-note, .menu-title-down-note {
+    font-size: 2.5rem;
+    font-family: "devonshire";
+    font-weight: 100;
+}
+
+.menu-title-chic {
+    font-family: "croissant one";
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.menu-title-delice {
+    font-family: "dancing script";
+    color: $delice-text;
+    font-size: 2rem;
+}
+
+.menu-title-palette {
+    font-family: "kaushan script";
+    color: $palette-text;
+}
+
+.menu-title-down-note:before {
+    content: "\f303";
+    font-family: "Font Awesome 5 Free";
+    font-size: xx-large;
+    margin-right: 2rem;
+}
+
+.menu-title-down {
+    font-size: 1.8rem;
+}
+
+.section-starter-chic {
+    margin-top: 3rem;
+}
+
+.section-main-course-chic {
+    color: $chic-main-course;
+    margin-top: 3rem;
+}
+
+.section-dessert-chic {
+    color: $chic-dessert;
+    margin-top: 3rem;
+}
+
+.section-flex {
+    margin-bottom: .5rem;
 }
 
 @media (min-width: 768px) {
@@ -183,27 +271,26 @@ footer a {
         grid-template-columns: 1fr 1fr;
     }
 
-    article.article {
+    .header-title {
+        font-size: 2.5rem;
+    }
+
+     .article {
         display: grid;
+        grid-area: 2/1/8/3;
+        margin: .5rem;
+    }
+
+    .article-menu {
+        height: 27rem;
     }
 
     main {
         grid-area: 2/1/9/3;
     }
 
-    article {
-        grid-area: 2/1/8/3;
-    }
     header {
         grid-area: 1/1/2/3;
-    }
-
-    .header-title {
-        font-size: 2.5rem;
-    }
-
-    .article-menu {
-        height: 27rem;;
     }
 
     .article-menu-note {
@@ -226,6 +313,14 @@ footer a {
         grid-area: 8/1/9/3;
     }
 
+    .article-menu-chic-title {
+        font-size: 1.2rem;
+    }
+
+    .menu-chic-subtitle {
+        font-size: 3rem;
+    }
+
     .previously-button {
         width: 40%;
     }
@@ -234,6 +329,65 @@ footer a {
         grid-area: 9/1/10/3;
         height: 5rem;
         font-size: 1.2rem;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .menu-title-chic {
+        font-size: 2.2rem;
+    }
+
+    .main-article-menu {
+        display: grid;
+        grid-area: 3/1/9/3;
+        padding: 3rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .main-article-menu-chic {
+        font-size: 1rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .menu-title-palette {
+        font-size: 2.7rem;
+    }
+
+    .menu-title-icon {
+        grid-area: 3/1/4/3;
+    }
+
+    .section-starter {
+        grid-area: 4/1/5/3
+    }
+
+    .section-main-course {
+        grid-area: 5/1/6/3;
+    }
+    .section-dessert {
+        grid-area: 6/1/7/3;
+    }
+
+    .menu-title-down {
+        grid-area: 7/1/9/3;
+    }
+
+    .section-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-flex-note {
+        padding: .3rem;
+    }
+
+    .section-flex-chic {
+        padding: .5rem;
     }
 }
 
@@ -244,7 +398,16 @@ footer a {
     }
 
     a.article-menu {
-        height: 36rem;;
+        height: 36rem;
+        width: 92%;
+    }
+
+    .article-menu-note-title {
+        font-size: 2.7rem;
+    }
+
+    .article-menu-chic-title {
+        font-size: 1.2rem;
     }
 
     .previously-button {
@@ -255,11 +418,26 @@ footer a {
     footer {
         font-size: 1.6rem;
     }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .main-article-menu {
+        margin-left: 7rem;
+        margin-right: 7rem;
+        font-size: 1.2rem;
+    }
+
+    .main-article-menu-chic {
+        font-size: 1.08rem;
+    }
 }
 
 @media (min-width: 1151px) {
     a.article-menu {
         height: 42rem;
+        width: 93%;
     }
 
     .previously-button {
@@ -270,6 +448,37 @@ footer a {
     footer {
         height: 6rem;
         font-size: 1.4rem;
+    }
+
+    .main-article-menu {
+        height: 1200px;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        font-size: 1.6rem;
+    }
+
+    .main-article-menu-chic {
+        font-size: 1.5rem;
+    }
+
+    .main-article-menu-palette {
+        height: 900px;
+    }
+
+    .main-title {
+        font-size: 2.3rem;
+    }
+
+    .menu-title {
+        font-size: 3.5rem;
+    }
+
+    .fa, .far, .fas {
+        font-size: 5rem;
+    }
+
+    .menu-title-down {
+        font-size: 3rem;
     }
 }
 
@@ -284,7 +493,8 @@ footer a {
     }
 
     a.article-menu {
-        height: 50rem;;
+        height: 50rem;
+        width: 94%;
     }
 
     .previously-button {
@@ -295,5 +505,38 @@ footer a {
     footer {
         height: 8rem;
         font-size: 2rem;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .menu-title {
+        font-size: 5rem;
+    }
+
+    .main-article-menu {
+        height: 1400px;
+        margin-left: 9rem;
+        margin-right: 9rem;
+        font-size: 1.9rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .main-article-menu-chic {
+        font-size: 1.8rem;
+    }
+
+    .main-article-menu-palette {
+        height: 1000px;
+    }
+
+    .menu-title-down {
+        font-size: 4rem;
+    }
+
+    .fa, .far, .fas {
+        font-size: 7rem;
     }
 }
