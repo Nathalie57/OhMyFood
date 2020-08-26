@@ -11,15 +11,20 @@ $green: #579C87;
 $yellow: #FDCB46;
 $note-color: #FCDFDB;
 $note-text: #3C1218;
-$note-music: #F15861;
+$note-music-light: #F6916A;
+$note-music-dark: #F04C55;
 $chic-color: #FFF5FE;
-$chic-text: #D5934B;
+$chic-text: #C67412;
 $chic-main-course: #A56799;
 $chic-dessert: #6E4CCC;
 $delice-color: #F9F9F9;
 $delice-text: #0887FB;
+$delice-dark-text: #0230DF;
+$delice-medium-text: #0670F3;
 $palette-color: #FDFDFD;
 $palette-text: #72BF56;
+$palette-dark-text: #3E9244;
+$palette-light-text: #BEFF7F;
 
 body {
     font-family: "montserrat";
@@ -55,6 +60,7 @@ header {
     justify-content: center;
     margin: 1rem;
     text-decoration: none;
+    box-shadow: 0px 0px 9px 2px #d2d2d2;
 }
 
 .article-menu-note {
@@ -76,36 +82,42 @@ header {
 
 .article-menu-chic {
     background: $chic-color;
-    color: $chic-text;
 }
 
 .article-menu-chic-title {
     font-family: "croissant one";
     font-size: x-large;
     text-decoration: none;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(300deg, $chic-text, $chic-dessert);
+    -webkit-background-clip: text;
 }
 
 .article-menu-chic-subtitle {
     font-family: "libre caslon text";
     font-size: xxx-large;
     margin-top: 1rem;
+    color: $chic-text;
 }
     
 .article-menu-delice {
     background: $delice-color;
-    color: $delice-text;
 }
 
 .article-menu-delice-title {
     font-family: "dancing script";
     font-size: xx-large;
     text-decoration: none;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(300deg, $delice-dark-text, $delice-text);
+    -webkit-background-clip: text;
 }
 
 .article-menu-delice-subtitle {
     font-family: "kalam";
     font-size: xxx-large;
     margin-top: 1rem;
+    color: $delice-text;
     }
     
 .article-menu-palette {
@@ -117,12 +129,16 @@ header {
     font-family: "kaushan script";
     font-size: xx-large;
     text-decoration: none;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(300deg, $palette-dark-text, $palette-light-text);
+    -webkit-background-clip: text;
 }        
 
 .article-menu-palette-subtitle {
     font-family: "kalam";
     font-size: xxx-large;
     margin-top: 1rem;
+    color: $palette-text;
 }
 
 
@@ -157,7 +173,9 @@ header {
 .fa, .far, .fas {
     font-family: "Font Awesome 5 Free";
     font-size: xxx-large;
-    color: $note-music;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(1deg, $note-music-dark, $note-music-light);
+    -webkit-background-clip: text;
 }
 
 footer {
@@ -165,6 +183,7 @@ footer {
     height: 4rem;
     background: #579C87;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-size: .8rem;
     position: -webkit-sticky;
@@ -173,10 +192,10 @@ footer {
 }
 
 footer a {
-    display: flex;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 100%;
+    margin-left: 1rem; 
+    margin-right: 1rem;
     text-decoration: none;
     color: $yellow;
 }
@@ -197,20 +216,82 @@ footer a {
 }
 
 h3 {
-    text-decoration: none;
-    background: linear-gradient(to top, $note-text, $note-text, transparent 10.01%) no-repeat left bottom / 0 100%;
-    transition: background-size 1s;
-  }
-  
-  h3:hover {
-    background-size: 50% 50%;
-  }
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-bottom: 1rem;
+}
+
+.line {
+    width: 20%;
+    height: 0.15rem;
+    margin-right: .15rem;
+}
+
+.line-note {
+    background-color: $note-text;
+}
+
+.line-chic {
+    background-color: $chic-text;
+}
+
+.line-chic-main-course {
+    background-color: $chic-main-course;
+}
+
+.line-chic-dessert {
+    background-color: $chic-dessert;
+}
+
+.line-delice-starter {
+    background-color: $delice-dark-text;
+}
+
+.line-delice-main-course {
+    background-color: $delice-medium-text;
+}
+
+.line-delice-dessert {
+    background-color: $delice-text;
+}
+
+.line-palette-left {
+    background: -webkit-linear-gradient(300deg, $palette-dark-text, $palette-light-text);
+}
+
+.line-palette-right {
+    background: -webkit-linear-gradient(300deg, $palette-light-text, $palette-dark-text);
+}
+   
+h3:after {
+    content: '';
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 500ms ease;
+}
+   
+h3:hover:after {
+    width: 40%;
+}
+
+.section-starter-note:after, .section-main-course-note:after, .section-dessert-note:after {
+    background: $note-text;
+}
 
 .main-article-menu {
     margin: 1rem;
     padding: .5rem;
     text-align: center;
     font-family: "kalam";
+    box-shadow: 0px 0px 9px 2px #d2d2d2;
 }
 
 .main-article-menu-note {
@@ -248,37 +329,51 @@ h3 {
     font-family: "croissant one";
     font-weight: 100;
     font-size: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(300deg, $chic-text, $chic-dessert);
+    -webkit-background-clip: text;
+    
 }
 
 .menu-title-delice {
     font-family: "dancing script";
-    color: $delice-text;
     font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(300deg, $delice-dark-text, $delice-text);
+    -webkit-background-clip: text;
 }
 
 .menu-title-palette {
     font-family: "kaushan script";
-    color: $palette-text;
-}
-
-.menu-title-down-note:before {
-    content: "\f303";
-    font-family: "Font Awesome 5 Free";
-    font-size: xx-large;
-    margin-right: 2rem;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(300deg, $palette-dark-text, $palette-light-text);
+    -webkit-background-clip: text;
 }
 
 .menu-title-down {
     font-size: 1.8rem;
+    padding-left: .8rem;
 }
 
 .section-starter-chic {
     margin-top: 3rem;
 }
 
+.section-starter-chic h3:after {
+    background: $chic-text;
+}
+
 .section-main-course-chic {
     color: $chic-main-course;
     margin-top: 3rem;
+}
+
+.section-main-course-chic h3:after {
+    background: $chic-main-course
+}
+
+.section-dessert-chic h3:after {
+    background: $chic-dessert;
 }
 
 .section-dessert-chic {
@@ -288,6 +383,17 @@ h3 {
 
 .section-flex {
     margin-bottom: .5rem;
+}
+
+.section-icon i {
+    font-size: 1.7rem;
+}
+
+section.section-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .footer-mentions:hover, .footer-contact:hover {
@@ -321,6 +427,10 @@ h3 {
     opacity: .2;
 }
 
+.menu-title-icon {
+    margin-bottom: 2rem;
+}
+
 @media (min-width: 768px) {
     body {
         display: grid;
@@ -335,6 +445,7 @@ h3 {
         display: grid;
         grid-area: 2/1/8/3;
         margin: .5rem;
+        justify-items: center;
     }
 
     .article-menu {
@@ -429,10 +540,6 @@ h3 {
         grid-area: 6/1/7/3;
     }
 
-    .menu-title-down {
-        grid-area: 7/1/9/3;
-    }
-
     .section-flex {
         display: flex;
         justify-content: space-between;
@@ -445,6 +552,17 @@ h3 {
     .section-flex-chic {
         padding: .5rem;
     }
+
+    .section-icon {
+        display: grid;
+        grid-area: 7/1/8/3;
+    }
+
+    .line {
+        width: 25%;
+        height: .2rem;
+    }
+    
 }
 
 @media (min-width: 901px) {
@@ -534,6 +652,10 @@ h3 {
     }
 
     .menu-title-down {
+        font-size: 3rem;
+    }
+
+    .section-icon i {
         font-size: 3rem;
     }
 }

@@ -41,6 +41,7 @@ header {
   justify-content: center;
   margin: 1rem;
   text-decoration: none;
+  box-shadow: 0px 0px 9px 2px #d2d2d2;
 }
 
 .article-menu-note {
@@ -62,36 +63,42 @@ header {
 
 .article-menu-chic {
   background: #FFF5FE;
-  color: #D5934B;
 }
 
 .article-menu-chic-title {
   font-family: "croissant one";
   font-size: x-large;
   text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(300deg, #C67412, #6E4CCC);
+  -webkit-background-clip: text;
 }
 
 .article-menu-chic-subtitle {
   font-family: "libre caslon text";
   font-size: xxx-large;
   margin-top: 1rem;
+  color: #C67412;
 }
 
 .article-menu-delice {
   background: #F9F9F9;
-  color: #0887FB;
 }
 
 .article-menu-delice-title {
   font-family: "dancing script";
   font-size: xx-large;
   text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(300deg, #0230DF, #0887FB);
+  -webkit-background-clip: text;
 }
 
 .article-menu-delice-subtitle {
   font-family: "kalam";
   font-size: xxx-large;
   margin-top: 1rem;
+  color: #0887FB;
 }
 
 .article-menu-palette {
@@ -103,12 +110,16 @@ header {
   font-family: "kaushan script";
   font-size: xx-large;
   text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(300deg, #3E9244, #BEFF7F);
+  -webkit-background-clip: text;
 }
 
 .article-menu-palette-subtitle {
   font-family: "kalam";
   font-size: xxx-large;
   margin-top: 1rem;
+  color: #72BF56;
 }
 
 .previously-button {
@@ -150,7 +161,9 @@ header {
 .fa, .far, .fas {
   font-family: "Font Awesome 5 Free";
   font-size: xxx-large;
-  color: #F15861;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(1deg, #F04C55, #F6916A);
+  -webkit-background-clip: text;
 }
 
 footer {
@@ -158,6 +171,7 @@ footer {
   height: 4rem;
   background: #579C87;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
   position: -webkit-sticky;
@@ -166,10 +180,10 @@ footer {
 }
 
 footer a {
-  display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
   text-decoration: none;
   color: #FDCB46;
 }
@@ -189,13 +203,74 @@ footer a {
 }
 
 h3 {
-  text-decoration: none;
-  background: linear-gradient(to top, #3C1218, #3C1218, transparent 10.01%) no-repeat left bottom/0 100%;
-  transition: background-size 1s;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-bottom: 1rem;
 }
 
-h3:hover {
-  background-size: 50% 50%;
+.line {
+  width: 20%;
+  height: 0.15rem;
+  margin-right: 0.15rem;
+}
+
+.line-note {
+  background-color: #3C1218;
+}
+
+.line-chic {
+  background-color: #C67412;
+}
+
+.line-chic-main-course {
+  background-color: #A56799;
+}
+
+.line-chic-dessert {
+  background-color: #6E4CCC;
+}
+
+.line-delice-starter {
+  background-color: #0230DF;
+}
+
+.line-delice-main-course {
+  background-color: #0670F3;
+}
+
+.line-delice-dessert {
+  background-color: #0887FB;
+}
+
+.line-palette-left {
+  background: -webkit-linear-gradient(300deg, #3E9244, #BEFF7F);
+}
+
+.line-palette-right {
+  background: -webkit-linear-gradient(300deg, #BEFF7F, #3E9244);
+}
+
+h3:after {
+  content: "";
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 500ms ease;
+}
+
+h3:hover:after {
+  width: 40%;
+}
+
+.section-starter-note:after, .section-main-course-note:after, .section-dessert-note:after {
+  background: #3C1218;
 }
 
 .main-article-menu {
@@ -203,6 +278,7 @@ h3:hover {
   padding: 0.5rem;
   text-align: center;
   font-family: "kalam";
+  box-shadow: 0px 0px 9px 2px #d2d2d2;
 }
 
 .main-article-menu-note {
@@ -214,7 +290,7 @@ h3:hover {
   background: #FFF5FE;
   font-family: "libre caslon text";
   font-size: 0.8rem;
-  color: #D5934B;
+  color: #C67412;
   font-weight: 400;
 }
 
@@ -240,37 +316,50 @@ h3:hover {
   font-family: "croissant one";
   font-weight: 100;
   font-size: 1.5rem;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(300deg, #C67412, #6E4CCC);
+  -webkit-background-clip: text;
 }
 
 .menu-title-delice {
   font-family: "dancing script";
-  color: #0887FB;
   font-size: 2rem;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(300deg, #0230DF, #0887FB);
+  -webkit-background-clip: text;
 }
 
 .menu-title-palette {
   font-family: "kaushan script";
-  color: #72BF56;
-}
-
-.menu-title-down-note:before {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-size: xx-large;
-  margin-right: 2rem;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(300deg, #3E9244, #BEFF7F);
+  -webkit-background-clip: text;
 }
 
 .menu-title-down {
   font-size: 1.8rem;
+  padding-left: 0.8rem;
 }
 
 .section-starter-chic {
   margin-top: 3rem;
 }
 
+.section-starter-chic h3:after {
+  background: #C67412;
+}
+
 .section-main-course-chic {
   color: #A56799;
   margin-top: 3rem;
+}
+
+.section-main-course-chic h3:after {
+  background: #A56799;
+}
+
+.section-dessert-chic h3:after {
+  background: #6E4CCC;
 }
 
 .section-dessert-chic {
@@ -280,6 +369,17 @@ h3:hover {
 
 .section-flex {
   margin-bottom: 0.5rem;
+}
+
+.section-icon i {
+  font-size: 1.7rem;
+}
+
+section.section-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .footer-mentions:hover, .footer-contact:hover {
@@ -334,6 +434,10 @@ h3:hover {
   opacity: 0.2;
 }
 
+.menu-title-icon {
+  margin-bottom: 2rem;
+}
+
 @media (min-width: 768px) {
   body {
     display: grid;
@@ -348,6 +452,7 @@ h3:hover {
     display: grid;
     grid-area: 2/1/8/3;
     margin: 0.5rem;
+    justify-items: center;
   }
 
   .article-menu {
@@ -443,10 +548,6 @@ h3:hover {
     grid-area: 6/1/7/3;
   }
 
-  .menu-title-down {
-    grid-area: 7/1/9/3;
-  }
-
   .section-flex {
     display: flex;
     justify-content: space-between;
@@ -458,6 +559,16 @@ h3:hover {
 
   .section-flex-chic {
     padding: 0.5rem;
+  }
+
+  .section-icon {
+    display: grid;
+    grid-area: 7/1/8/3;
+  }
+
+  .line {
+    width: 25%;
+    height: 0.2rem;
   }
 }
 @media (min-width: 901px) {
@@ -545,6 +656,10 @@ h3:hover {
   }
 
   .menu-title-down {
+    font-size: 3rem;
+  }
+
+  .section-icon i {
     font-size: 3rem;
   }
 }
