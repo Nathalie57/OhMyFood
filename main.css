@@ -124,18 +124,18 @@ header {
 
 .previously-button {
   width: 70%;
-  height: 3rem;
+  height: 4rem;
   background: #579C87;
   color: #FDCB46;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .previously-button:after {
@@ -262,7 +262,7 @@ h3:after {
   width: 0;
   height: 2px;
   background: black;
-  transition: width 500ms ease;
+  transition: width 1s ease;
 }
 
 h3:hover:after {
@@ -451,12 +451,14 @@ section.section-icon {
   .article {
     display: grid;
     grid-area: 2/1/8/3;
-    margin: 0.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     justify-items: center;
   }
 
   .article-menu {
     height: 27rem;
+    margin-top: 2rem;
   }
 
   main {
@@ -502,7 +504,7 @@ section.section-icon {
   footer {
     grid-area: 9/1/10/3;
     height: 5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .main-title {
@@ -578,7 +580,8 @@ section.section-icon {
 
   a.article-menu {
     height: 36rem;
-    width: 92%;
+    width: 85%;
+    margin-top: 3rem;
   }
 
   .article-menu-note-title {
@@ -674,7 +677,7 @@ section.section-icon {
 
   a.article-menu {
     height: 50rem;
-    width: 94%;
+    width: 90%;
   }
 
   .previously-button {
